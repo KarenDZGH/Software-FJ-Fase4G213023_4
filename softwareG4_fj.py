@@ -410,7 +410,7 @@ def ejecutar_simulaciones():
         reserva1 = Reserva("RES-1", cliente1, sala1, 2, descuento=0.10, asistentes=6)
         gestor.agregar_reserva(reserva1)
         reserva1.confirmar()
-        reserva1.procesar()
+       
     except ErrorSoftwareFJ as e:
         logger.error(f"Simulacion 5 fallo: {e}")
         print(f"[Sim 5] Error: {e}")
@@ -431,7 +431,7 @@ def ejecutar_simulaciones():
         reserva2 = Reserva("RES-2", cliente2, equipo1, 3)
         gestor.agregar_reserva(reserva2)
         reserva2.confirmar()
-        reserva2.procesar()
+        
     except ErrorSoftwareFJ as e:
         logger.error(f"Simulacion 7 fallo: {e}")
         print(f"[Sim 7] Error: {e}")
@@ -471,7 +471,7 @@ def ejecutar_simulaciones():
         reserva3 = Reserva("RES-3", cliente2, asesoria1, 3, descuento=0.05)
         gestor.agregar_reserva(reserva3)
         reserva3.confirmar()
-        reserva3.procesar()
+        
 
         total_simple = reserva3.calcular_total()
         total_iva = reserva3.calcular_total(impuesto=0.19)
